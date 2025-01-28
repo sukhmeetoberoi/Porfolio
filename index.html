@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <title>Sukhmeet Singh Oberoi Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            background-color: rgb(3, 3, 27);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            font-size: 1.03rem;
+            color: lavender;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 120px 0;
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 2.22rem;
+        }
+
+        .rightsection img {
+            width: 80%;
+            margin: 50px 0;
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: rgb(3, 3, 27);
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .projects {
+            text-align: left;
+            max-width: 70%;
+            margin: auto;
+        }
+
+        .projects h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .project-item {
+            margin-bottom: 30px;
+        }
+
+        .project-item a {
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .project-item a:hover {
+            color: lavender;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            color: lightgray;
+            margin-top: 8px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+        }
+
+        #about .about-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: lightgray;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        /* Service Section Styles */
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-item {
+            background-color: rgb(3, 3, 27);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-item h3 {
+            color: blueviolet;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
+
+        .service-item ul {
+            list-style-type: none;
+            font-size: 1rem;
+            color: lightgray;
+            margin-top: 10px;
+        }
+
+        .service-item ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section Styles */
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            background-color: rgb(3, 3, 27);
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            margin: 10px;
+            width: auto; /* Automatically adjusts the width based on content */
+            display: inline-block; /* Ensures the box sizes based on the content */
+            word-wrap: break-word; /* Handles text overflow */
+        }
+
+        .contact-item h4 {
+            color: blueviolet;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            font-size: 1.1rem;
+            color: lightgray;
+        }
+
+        .contact-email {
+            color: white;
+            background-color: rgb(3, 3, 27);
+            padding: 10px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 2px solid rgba(170, 107, 228, 0.5);
+            width: auto;
+            display: inline-block; /* Ensures the box sizes based on the content */
+            word-wrap: break-word; /* Handles text overflow */
+        }
+
+        .contact-email a {
+        color: white;
+        text-decoration: none;
+        }
+
+        .contact-email a:hover {
+            color: lavender;
+        }
+        .contact-item {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Sukhmeet Singh Portfolio</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Past Projects</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="firstsection">
+            <div class="leftsection">
+                Hi, My Name is <span class="purple">Sukhmeet Singh Oberoi</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span> <!-- Animated text will appear here -->
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/sukhmeet-singh-oberoi" target="_blank">
+                        <img src="linkedin-logo.png" alt="LinkedIn">
+                    </a>
+                    <a href="mailto:sukhmeetoberoi@gmail.com">
+                        <img src="mail-logo.png" alt="Email">
+                    </a>
+                    <a href="https://github.com/sukhmeetoberoi" target="_blank">
+                        <img src="github-logo.png" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+            <div class="rightsection"><img src="bg.png" alt="Profile Image"></div>
+        </section>
+        <hr>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-text">
+                I am a dedicated and driven technology enthusiast with a strong focus on Web Development, Artificial Intelligence, and Machine Learning. I specialize in creating efficient and scalable web applications, implementing machine learning models to solve real-world problems, and managing projects from start to finish.
+
+                Over the years, I have developed a deep understanding of full-stack web development, mastering languages such as HTML, CSS, JavaScript, and frameworks like React and Node.js. I have also gained significant expertise in AI/ML technologies, utilizing Python and frameworks such as TensorFlow and PyTorch to build intelligent systems.
+
+                My projects showcase my versatility and my ability to work across different domains, ranging from web development to IoT-based systems. Whether it's developing applications that connect communities or building machine learning models that analyze data, I am always eager to explore new technologies and implement innovative solutions.
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Services</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li>HTML5, CSS3, JavaScript, React</li>
+                        <li>Node.js, Express.js, MongoDB</li>
+                        <li>Responsive Web Design</li>
+                        <li>Full-Stack Web Development</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3>AI/ML Solutions</h3>
+                    <ul>
+                        <li>Machine Learning with Python (Scikit-learn, TensorFlow)</li>
+                        <li>Deep Learning & Neural Networks</li>
+                        <li>Data Preprocessing & Feature Engineering</li>
+                        <li>Natural Language Processing (NLP)</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3>Project Management</h3>
+                    <ul>
+                        <li>Agile Methodology</li>
+                        <li>Scrum & Kanban</li>
+                        <li>Team Collaboration & Communication</li>
+                        <li>Project Documentation & Reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Past Projects Section -->
+        <section id="projects" class="projects">
+            <h2>Past Projects</h2>
+
+            <div class="project-item">
+                <a href="https://github.com/your-repo/food-donation-webapp" target="_blank">Food Donation Web App</a>
+                <p class="project-description">A web application connecting donors and NGOs to minimize food waste. Features include donor registration, donation form, food pickup alerts, and location-based food delivery points using Google Maps API.</p>
+            </div>
+            <div class="project-item">
+                <a href="https://github.com/your-repo/chatbot-career-guidance" target="_blank">Career Guidance Chatbot</a>
+                <p class="project-description">A chatbot that guides users on career options based on their interests, weaknesses, and market trends. Integrates with external career resources.</p>
+            </div>
+            <div class="project-item">
+                <a href="https://github.com/your-repo/esp32-cam-plant-health-detection" target="_blank">ESP32-CAM Plant Health Detection</a>
+                <p class="project-description">A smart system using ESP32-CAM and machine learning to detect plant health and provide real-time monitoring data. Includes IoT-based control for automated watering.</p>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>Email</h4>
+                    <p class="contact-email"><a href="mailto:sukhmeetoberoi@gmail.com">sukhmeetoberoi@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h4>Phone</h4>
+                    <p>+91-7027551823</p>
+                </div>
+                <div class="contact-item">
+                    <h4>LinkedIn</h4>
+                    <p><a href="https://www.linkedin.com/in/sukhmeet-singh-oberoi" target="_blank">Connect on LinkedIn</a></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sukhmeet Singh Oberoi | All rights reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        // Initialize the typed.js animation for the home section
+        var options = {
+            strings: ["Web Developer", "AI/ML Enthusiast", "Tech Innovator", "Problem Solver", "Creative Mind"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            backDelay: 1000,
+            loop: true
+        };
+        var typed = new Typed("#element", options);
+    </script>
+
+</body>
+
+</html>
